@@ -10,7 +10,28 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-
+let quotes = [
+  {
+    quote: "Waste no more time arguing what a good man should be. Be One.",
+    source: "Marcus Aurelius",
+  },
+  {
+    quote: "You could leave life right now. Let that determine what you do and say and think.",
+    source: "Marcus Aurelius",
+  },
+  {
+    quote: "Life is very short and anxious for those who forget the past, neglect the present, and fear the future.",
+    source: "Seneca",
+  },
+  {
+    quote: "How long are you going to wait before you demand the best for yourself?",
+    source: "Epictetus",
+  },
+  {
+    quote: "He who fears death will never do anything worth of a man who is alive.",
+    source: "Seneca",
+  },
+];
 
 
 /***
