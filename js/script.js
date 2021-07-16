@@ -36,17 +36,45 @@ let quotes = [
 ];
 
 
+
+
 /***
  * `getRandomQuote` function
 ***/
+function getRandomQuote() {
+  let randomNumber = quotes[ Math.floor( Math.random() * quotes.length) ];
+  return randomNumber;
+};
 
+getRandomQuote();
 
 
 /***
  * `printQuote` function
 ***/
+function printQuote() {
+  let quoteObject = getRandomQuote(quotes);
+  let html = `
+  <p class="quote">${quoteObject.quote} </p>
+  <p class="source">${quoteObject.source}</p>
+`;
 
+if (quoteObject.citation !== undefined ) {
+  html += `
+  <span class="citation">${quoteObject.citation} </span>
+  `
+};
 
+if (quoteObject.year !== undefined ) {
+  html += `
+  <span class="year">${quoteObject.year}</span>
+  `;
+};
+
+html += `</p>`;
+document.getElementById('quote-box').innerHTML = html; 
+
+};
 
 /***
  * click event listener for the print quote button
