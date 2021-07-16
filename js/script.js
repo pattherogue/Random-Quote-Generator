@@ -30,6 +30,8 @@ let quotes = [
   {
     quote: "He who fears death will never do anything worth of a man who is alive.",
     source: "Seneca",
+    citation: "Dialogues and Essays",
+    year: "2008",
   },
 ];
 
