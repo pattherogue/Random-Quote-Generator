@@ -8,7 +8,7 @@ project 1 - A Random Quote Generator
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 /*** 
- * `quotes` array 
+ * `quotes` array used to contain data structure
 ***/
 let quotes = [
   {
@@ -39,39 +39,39 @@ let quotes = [
 
 
 /***
- * `getRandomQuote` function
+ * `getRandomQuote` function to create random number that returns random quote 
 ***/
 function getRandomQuote() {
-  let randomNumber = quotes[ Math.floor( Math.random() * quotes.length) ];
-  return randomNumber;
+  let randomNumber = quotes[ Math.floor( Math.random() * quotes.length) ]; /* variable to store random number */
+  return randomNumber; /* return random quote object */
 };
 
-getRandomQuote();
+
 
 
 /***
- * `printQuote` function
+ * `printQuote` function display new quote each time user clicks 
 ***/
 function printQuote() {
-  let quoteObject = getRandomQuote(quotes);
+  let quoteObject = getRandomQuote(quotes); /* variable to store random quote object from getRandomQuote() function */
   let html = `
   <p class="quote">${quoteObject.quote} </p>
   <p class="source">${quoteObject.source}</p>
-`;
+`; /* variable to store HTML string */
 
 if (quoteObject.citation !== undefined ) {
   html += `
   <span class="citation">${quoteObject.citation} </span>
-  `
-};
+  `;
+}  /* if statement citation */
 
 if (quoteObject.year !== undefined ) {
   html += `
   <span class="year">${quoteObject.year}</span>
   `;
-};
+} /* if statement year */
 
-html += `</p>`;
+html += `</p>`; /* return full HTML string displaying random quote */
 document.getElementById('quote-box').innerHTML = html; 
 
 };
